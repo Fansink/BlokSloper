@@ -5,8 +5,7 @@ public class MuziekSpeler : MonoBehaviour {
 
     static MuziekSpeler instance = null;
 
-    // Use this for initialization
-    void Start ()
+    void Awake()
     {
         if (instance != null)
         {
@@ -17,7 +16,12 @@ public class MuziekSpeler : MonoBehaviour {
             instance = this;
             GameObject.DontDestroyOnLoad(gameObject);
         }
-        
+    }
+
+    // Use this for initialization
+    void Start ()
+    {
+
     }
 
 	// Update is called once per frame
